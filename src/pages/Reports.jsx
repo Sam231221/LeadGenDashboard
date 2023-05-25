@@ -18,7 +18,7 @@ const Reports = () => {
 
                 <div className='shadow-lg bg-white rounded p-3'>
                     <div className='flex  justify-between items-center'>
-                        <h2 className='font-bold text-primaryTextColor text-lg'>Recent Sales | <span className='text-xs text-forteryTextColor'>Today</span></h2>
+                        <h2 className='font-semibold text-primaryTextColor text-lg'>Product Reviews | <span className='text-xs text-forteryTextColor'>This month</span></h2>
                         <BiDotsHorizontal className='text-forteryTextColor' />
                     </div>
                     <Line2Chart />
@@ -26,7 +26,7 @@ const Reports = () => {
 
                 <div className='shadow-lg bg-white rounded p-3'>
                     <div className='flex  justify-between items-center'>
-                        <h2 className='font-bold text-primaryTextColor text-lg'>Recent Sales | <span className='text-xs text-forteryTextColor'>Today</span></h2>
+                        <h2 className='font-semibold text-primaryTextColor text-lg'>Website Traffic | <span className='text-xs text-forteryTextColor'>This month</span></h2>
                         <BiDotsHorizontal className='text-forteryTextColor' />
                     </div>
                     <BarChart />
@@ -34,7 +34,7 @@ const Reports = () => {
 
                 <div className='shadow-lg bg-white rounded p-3'>
                     <div className='flex  justify-between items-center'>
-                        <h2 className='font-bold text-primaryTextColor text-lg'>Recent Sales | <span className='text-xs text-forteryTextColor'>Today</span></h2>
+                        <h2 className='font-semibold text-primaryTextColor text-lg'>Recent Sales | <span className='text-xs text-forteryTextColor'>This month</span></h2>
                         <BiDotsHorizontal className='text-forteryTextColor' />
                     </div>
                     <WebTrafficChart />
@@ -42,7 +42,7 @@ const Reports = () => {
 
                 <div className='shadow-lg bg-white rounded p-3'>
                     <div className='flex  justify-between items-center'>
-                        <h2 className='font-bold text-primaryTextColor text-lg'>Recent Sales | <span className='text-xs text-forteryTextColor'>Today</span></h2>
+                        <h2 className='font-semibold text-primaryTextColor text-lg'>Budgets | <span className='text-xs text-forteryTextColor'>This month</span></h2>
                         <BiDotsHorizontal className='text-forteryTextColor' />
                     </div>
                     <BudgetChart />

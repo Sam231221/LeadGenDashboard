@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 body{
   font-family: 'Open Sans', sans-serif;
 }
@@ -7,6 +7,7 @@ body{
 }
 
 .navigation ul li:hover a::before,
+.navigation ul li.active a::before,
 .navigation ul li.hovered a::before {
   content: "";
   position: absolute;
@@ -20,6 +21,7 @@ body{
   pointer-events: none;
 }
 .navigation ul li:hover a::after,
+.navigation ul li.active a::after,
 .navigation ul li.hovered a::after {
   content: "";
   position: absolute;
@@ -40,6 +42,7 @@ body{
   width: 4px;
   top: 0;
   bottom: 0;
+  z-index: 1;
   background-color: #eceefe;
 }
 .donut-chart svg foreignObject >div{

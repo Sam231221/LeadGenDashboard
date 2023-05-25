@@ -115,10 +115,11 @@ const Customers = () => {
             <div className='shadow-lg bg-white rounded p-2'>
 
 
-                <div className='flex items-center justify-between mt-2'>
+                <div className='flex gap-3 flex-col md:flex-row md:mt-2 items-center justify-between '>
                     <div className="text-xs flex items-center gap-3">
                         <span className='ml-1'>Filter By Status:</span>
-                        <select onChange={(e) => handleFilter(e)} className='focus:outline-none border-[1px] focus:border-secondaryTextColor' name="" id="">
+                        <select onChange={(e) => handleFilter(e)} 
+                        className=' focus:outline-none border-[1px] focus:border-secondaryTextColor'>
                             <option value="">----</option>
                             <option value="Active">Active</option>
                             <option value="Inactive">Inactive</option>
@@ -136,7 +137,7 @@ const Customers = () => {
                 </div>
 
 
-                <div className='py-2'>
+                <div className='py-2 overflow-y-auto'>
                     <table className='table border w-full mt-4 mb-2'>
                         <thead className='bg-secondaryBgColor '>
                             <tr>
