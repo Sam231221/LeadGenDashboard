@@ -1,11 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-body{
-  font-family: 'Open Sans', sans-serif;
-}
-.topbar{
-  box-shadow: 9px 8px 9px rgba(0,0,0,0.1);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+:root {
+  scroll-behavior: smooth;
 }
 
+:root {
+  --primaryBgColor: #fff;
+  --secondaryBgColor: #eef2fa;
+  --ternaryBgColor: #f4f4f4;
+  --forteryBgColor: #f0f3f8;
+
+  --boxShadowColor: rgba(0, 0, 0, 0.1);
+
+  --primaryTextColor: #000000eb;
+
+  --LogoBgColor: #4659f1;
+  --LogoTextColor: #014e9d;
+
+  --LinkColor: #00000099;
+  --LinkBgColor: #eef2fa;
+  --LinkActiveColor: #000000cb;
+  --LinkHoverColor: #eef2fa;
+
+  --primaryHeadingColor: #151515;
+  --secondaryHeadingColor: #383838;
+  --primaryParagraphColor: #2e2e2e;
+  --secondaryParagraphColor: #444444;
+
+  --cardBgColor: #f7f7f9;
+  --skeletonBaseColor: #eef2fa;
+  --skeletonHighlightColor: #dddddd;
+
+  --sectionTitleColor: #013685;
+  --sectionParagraphColor: #4154f1;
+  --sectionMiniColor: #899bbd;
+
+  --secondaryHoverColor: #000;
+
+  --primaryBtnBgColor: #0b5ed7;
+  --primaryBtnTextColor: #ffffff;
+  --primaryBtnBgHoverColor: #24a2dc;
+
+  --togglerColor: #646464;
+  --togglerBorderColor: #acacac;
+}
+
+[data-color="yellow"] {
+  --sectionTitleColor: #e5e916;
+  --sectionParagraphColor: #c0c00c;
+  --sectionMiniColor: #7b8b3f;
+
+  --LogoBgColor: #fbff03;
+  --LogoTextColor: #000000eb;
+  --togglerColor: #fbff03;
+
+  --LinkColor: #7b8b3f;
+  --LinkActiveColor: #e5e916;
+  --LinkHoverColor: #cfd300ea;
+
+  --togglerBorderColor: #fbff03;
+}
+[data-color="green"] {
+  --sectionTitleColor: #55df15;
+  --sectionParagraphColor: #40b40a;
+  --sectionMiniColor: #4c8b3f;
+
+  --LogoBgColor: #60ff21;
+  --LogoTextColor: #014e9d;
+  --togglerColor: #60ff21;
+
+  --LinkColor: #4c8b3f;
+  --LinkActiveColor: #55df15;
+  --LinkHoverColor: #37c200;
+
+  --togglerBorderColor: #60ff21;
+}
+[data-theme="dark"] {
+  --primaryBgColor: #000;
+  --secondaryBgColor: #121212;
+  --ternaryBgColor: #151515;
+  --forteryBgColor: #191818;
+  --boxShadowColor: rgba(47 45 46 / 64%);
+
+  --primaryTextColor: #f0f0f0;
+  --LogoTextColor: #fff;
+
+  --LinkBgColor: #121212;
+
+  --primaryHeadingColor: #ffffff;
+  --secondaryHeadingColor: #f1f1f1;
+
+  --cardBgColor: #0e0e0e;
+  --skeletonBaseColor: #1f1f1f;
+  --skeletonHighlightColor: #4a4a4a;
+
+  --primaryParagraphColor: #dfdfdf;
+  --secondaryParagraphColor: #b1b1b1;
+
+  --secondaryHoverColor: #000;
+
+  --primaryBtnBgColor: #0b5ed7;
+  --primaryBtnTextColor: #ffffff;
+  --primaryBtnBgHoverColor: #24a2dc;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.topbar {
+  box-shadow: 9px 8px 9px rgba(0, 0, 0, 0.1);
+}
+.topbar {
+  background-color: var(--primaryBgColor);
+}
+.hamburger {
+  color: var(--primaryTextColor);
+}
+
+.search-bar {
+  border-color: var(--forteryBgColor);
+  background-color: var(--primaryBgColor);
+  color: var(--primaryTextColor);
+}
+.search-bar input {
+  background-color: var(--secondaryBgColor);
+  color: var(--primaryTextColor);
+}
+.search-bar svg {
+  color: var(--primaryTextColor);
+}
+.right-topbar-items svg {
+  color: var(--primaryTextColor);
+}
+.profiler {
+  background-color: var(--primaryBgColor);
+  color: var(--primaryTextColor);
+}
+.profile-dropdown {
+  background-color: var(--primaryBgColor);
+  color: var(--primaryTextColor);
+}
+.profile-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+
+  right: 20px;
+  border-top: 1px;
+  border-left: 1px;
+  border-color: var(--primaryBgColor);
+}
 .navigation ul li:hover a::before,
 .navigation ul li.active a::before,
 .navigation ul li.hovered a::before {
@@ -17,7 +159,7 @@ body{
   height: 50px;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 35px 35px 0 10px #EEF2FA;
+  box-shadow: 35px 35px 0 10px var(--LinkBgColor);
   pointer-events: none;
 }
 .navigation ul li:hover a::after,
@@ -31,11 +173,15 @@ body{
   height: 50px;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 35px -35px 0 10px #EEF2FA;
+  box-shadow: 35px -35px 0 10px var(--LinkBgColor);
   pointer-events: none;
 }
 
-.activity-time::before{
+/* .navigation ul li:hover a::before {
+  box-shadow: 35px 35px 0 10px var(--skeletonBaseColor);
+  pointer-events: none;
+} */
+.activity-time::before {
   content: "";
   position: absolute;
   right: -20px;
@@ -43,8 +189,8 @@ body{
   top: 0;
   bottom: 0;
   z-index: 1;
-  background-color: #eceefe;
+  background-color: var(--primaryBgColor);
 }
-.donut-chart svg foreignObject >div{
+.donut-chart svg foreignObject > div {
   display: none;
 }

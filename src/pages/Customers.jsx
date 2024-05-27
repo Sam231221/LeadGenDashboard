@@ -119,20 +119,23 @@ const Customers = () => {
   return (
     <div className="p-5">
       <div className="mb-5">
-        <h2 className="text-primaryTextColor font-semibold text-xl">
+        <h2 className="text-[var(--sectionTitleColor)] font-semibold text-xl">
           Customers
         </h2>
-        <p className="text-ternaryTextColor font-bold  text-xs">
-          Home / <span className="text-forteryTextColor ">Customers</span>
+        <p className="text-[var(--sectionMiniColor)] font-bold  text-xs">
+          Home /{" "}
+          <span className="text-[var(--sectionParagraphColor)] ">
+            Customers
+          </span>
         </p>
       </div>
-      <div className="shadow-lg bg-white rounded p-2">
+      <div className="shadow-lg bg-[var(--primaryBgColor)] rounded p-2">
         <div className="flex gap-3 flex-col md:flex-row md:mt-2 items-center justify-between ">
-          <div className="text-xs flex items-center gap-3">
+          <div className="text-xs text-[var(--primaryParagraphColor)] flex items-center gap-3">
             <span className="ml-1">Filter By Status:</span>
             <select
               onChange={(e) => handleFilter(e)}
-              className=" focus:outline-none border-[1px] focus:border-secondaryTextColor"
+              className="bg-[var(--secondaryBgColor)] focus:outline-none border-[1px] focus:border-secondaryTextColor"
             >
               <option value="">----</option>
               <option value="Active">Active</option>
@@ -146,17 +149,17 @@ const Customers = () => {
               type="text"
               value={query}
               onChange={(e) => handleSearch(e)}
-              className="border-[1px] text-xs focus:outline-none
-                                focus:border-secondaryTextColor 
-                                border-primaryTextColor  py-2 px-3"
+              className="border-[1px] bg-[var(--secondaryBgColor)] text-[var(--primaryParagraphColor)]  text-xs focus:outline-none
+                                focus:border-[var(--sectionParagraphColor)]
+                                border-[var(--sectionTitleColor)]  py-2 px-3"
               placeholder="Search here..."
             />
           </div>
         </div>
 
         <div className="py-2 overflow-y-auto">
-          <table className="table border w-full mt-4 mb-2">
-            <thead className="bg-secondaryBgColor ">
+          <table className="table border border-[var(--ternaryBgColor)] w-full mt-4 mb-2">
+            <thead className="bg-[var(--ternaryBgColor)] text-[var(--primaryHeadingColor)]">
               <tr>
                 <th className="p-2 text-sm font-semibold tracking-wide text-left">
                   S.N
@@ -178,26 +181,31 @@ const Customers = () => {
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="">
               {customers.map((customer, i) => (
-                <tr key={i + 1}>
+                <tr
+                  className="hover:bg-[var(--LinkHoverColor)] cursor-pointer"
+                  key={i + 1}
+                >
                   <td className="p-2 text-sm text-gray-700">
                     <a
-                      className="text-primaryTextColor hover:text-secondaryTextColor"
+                      className="text-[var(--sectionTitleColor)] hover:text-secondaryTextColor"
                       href="#"
                     >
                       {customer.id}
                     </a>
                   </td>
-                  <td className="p-2 text-sm text-gray-700">{customer.name}</td>
+                  <td className="p-2 text-sm text-[var(--secondaryParagraphColor)]">
+                    {customer.name}
+                  </td>
 
-                  <td className="p-2 text-sm text-gray-700">
+                  <td className="p-2 text-sm text-[var(--secondaryParagraphColor)]">
                     {customer.email}
                   </td>
-                  <td className="p-2 text-sm text-gray-700">
+                  <td className="p-2 text-sm text-[var(--secondaryParagraphColor)]">
                     {customer.phone}
                   </td>
-                  <td className="p-2 text-sm text-gray-700">
+                  <td className="p-2 text-sm text-[var(--secondaryParagraphColor)]">
                     {customer.address}
                   </td>
                   <td className="p-2 text-xs">
@@ -206,7 +214,7 @@ const Customers = () => {
                         customer.status == "Inactive"
                           ? "text-red-600"
                           : "text-green-500"
-                      } bg-secondaryBgColor font-bold rounded-full py-1 px-2`}
+                      } bg-[var(--secondaryBgColor)] font-bold rounded-full py-1 px-2`}
                     >
                       {customer.status}
                     </span>
