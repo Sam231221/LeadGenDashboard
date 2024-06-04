@@ -264,7 +264,6 @@
       "method": "Online Payment"
     }
   ],
-
   "top-selling": [
     {
       "id": 2357741,
@@ -275,7 +274,6 @@
       "price": 920,
       "revenue": 500000,
       "sold": 897
-
     },
     {
       "id": 2235235,
@@ -297,7 +295,6 @@
       "revenue": 11000,
       "sold": 40
     }
-
   ],
   "products": [
     {
@@ -307,6 +304,14 @@
       "img": "https://m.media-amazon.com/images/I/51QxA-98Q+L._AC_SX425_.jpg",
       "status": "Published",
       "added_on": "May 25th 2023"
+    },
+    {
+      "id": 1064164,
+      "name": "Kim SunJwoong",
+      "price": "33",
+      "img": "https://m.media-amazon.com/images/I/51QxA-98Q+L._AC_SX425_.jpg",
+      "status": "Draft",
+      "added_on": "June 4th 2024"
     }
   ]
 }

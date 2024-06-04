@@ -105,6 +105,29 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  padding: 12px 20px;
+  text-align: center;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+th .menu {
+  visibility: hidden;
+}
+
+th:hover .menu {
+  visibility: visible;
+}
+
 .topbar {
   box-shadow: 9px 8px 9px rgba(0, 0, 0, 0.1);
 }
