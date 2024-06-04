@@ -13,13 +13,7 @@
 
   --primaryTextColor: #000000eb;
 
-  --LogoBgColor: #4659f1;
-  --LogoTextColor: #014e9d;
-
-  --LinkColor: #00000099;
   --LinkBgColor: #eef2fa;
-  --LinkActiveColor: #000000cb;
-  --LinkHoverColor: #eef2fa;
 
   --primaryHeadingColor: #151515;
   --secondaryHeadingColor: #383838;
@@ -30,18 +24,11 @@
   --skeletonBaseColor: #eef2fa;
   --skeletonHighlightColor: #dddddd;
 
-  --sectionTitleColor: #013685;
-  --sectionParagraphColor: #4154f1;
-  --sectionMiniColor: #899bbd;
-
   --secondaryHoverColor: #000;
 
   --primaryBtnBgColor: #0b5ed7;
   --primaryBtnTextColor: #ffffff;
   --primaryBtnBgHoverColor: #24a2dc;
-
-  --togglerColor: #646464;
-  --togglerBorderColor: #acacac;
 }
 
 [data-color="yellow"] {
@@ -51,13 +38,14 @@
 
   --LogoBgColor: #fbff03;
   --LogoTextColor: #000000eb;
+
   --togglerColor: #fbff03;
+  --togglerBorderColor: #fbff03;
 
   --LinkColor: #7b8b3f;
   --LinkActiveColor: #e5e916;
   --LinkHoverColor: #cfd300ea;
-
-  --togglerBorderColor: #fbff03;
+  --LinkHoveredTextColor: #fff;
 }
 [data-color="green"] {
   --sectionTitleColor: #55df15;
@@ -66,22 +54,57 @@
 
   --LogoBgColor: #60ff21;
   --LogoTextColor: #014e9d;
+
   --togglerColor: #60ff21;
+  --togglerBorderColor: #60ff21;
 
   --LinkColor: #4c8b3f;
   --LinkActiveColor: #55df15;
   --LinkHoverColor: #37c200;
+  --LinkHoveredTextColor: #fff;
+}
+[data-color="cyan"] {
+  --sectionTitleColor: #205bff;
+  --sectionParagraphColor: #0c4baa;
+  --sectionMiniColor: #0c2e64;
 
-  --togglerBorderColor: #60ff21;
+  --LogoBgColor: #4154f1;
+  --LogoTextColor: #014e9d;
+
+  --togglerColor: #205bff;
+  --togglerBorderColor: #205bff;
+
+  --LinkColor: #0e4494;
+  --LinkActiveColor: #205bff;
+  --LinkHoverColor: #205bff;
+  --LinkHoveredTextColor: #fff;
+}
+[data-color="orange"] {
+  --sectionTitleColor: #ffae17;
+  --sectionParagraphColor: #d6900f;
+  --sectionMiniColor: #856325;
+
+  --LogoBgColor: #ffae17;
+  --LogoTextColor: #014e9d;
+
+  --togglerColor: #ffae17;
+  --togglerBorderColor: #ffae17;
+
+  --LinkColor: #bd8216;
+  --LinkActiveColor: #ffae17;
+  --LinkHoverColor: #ffb120;
+  --LinkHoveredTextColor: #fff;
 }
 [data-theme="dark"] {
   --primaryBgColor: #000;
   --secondaryBgColor: #121212;
   --ternaryBgColor: #151515;
   --forteryBgColor: #191818;
+
   --boxShadowColor: rgba(47 45 46 / 64%);
 
   --primaryTextColor: #f0f0f0;
+
   --LogoTextColor: #fff;
 
   --LinkBgColor: #121212;

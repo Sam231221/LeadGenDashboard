@@ -19,7 +19,7 @@ function getInitialColor() {
   if (typeof savedColor === "string") {
     return savedColor;
   }
-  return "default";
+  return "cyan";
 }
 export default function ThemeSwitcher() {
   const [showOptions, setShowOptions] = useState(false);
@@ -117,7 +117,7 @@ export default function ThemeSwitcher() {
             {modes.map((item, index) => (
               <li
                 key={index}
-                className="flex text-sm  text-[var(--primaryParagraphColor)] hover:bg-[var(--LinkHoverColor)] hover:text-[var(--primaryTextColor)] font-medium cursor-pointer items-center px-2 py-1  gap-2"
+                className="flex text-sm  text-[var(--primaryParagraphColor)] hover:bg-[var(--LinkHoverColor)] hover:text-[var(--LinkHoveredTextColor)] font-medium cursor-pointer items-center px-2 py-1  gap-2"
                 value={item.id}
                 onClick={(e) => handleModeClick(e)}
               >
