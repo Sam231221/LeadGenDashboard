@@ -117,7 +117,11 @@ export default function ThemeSwitcher() {
             {modes.map((item, index) => (
               <li
                 key={index}
-                className="flex text-sm  text-[var(--primaryParagraphColor)] hover:bg-[var(--LinkHoverColor)] hover:text-[var(--LinkHoveredTextColor)] font-medium cursor-pointer items-center px-2 py-1  gap-2"
+                className={`${
+                  mode === item.id
+                    ? "bg-[var(--LinkHoverColor)] text-[var(--LinkHoveredTextColor)]"
+                    : ""
+                } flex text-sm text-[var(--primaryParagraphColor)] hover:bg-[var(--LinkHoverColor)] hover:text-[var(--LinkHoveredTextColor)] font-medium cursor-pointer items-center px-2 py-1  my-1 gap-2`}
                 value={item.id}
                 onClick={(e) => handleModeClick(e)}
               >
