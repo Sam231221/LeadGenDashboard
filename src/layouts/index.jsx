@@ -77,7 +77,7 @@ const Layout = ({ children }) => {
       <div
         className={`${
           isOpen ? "w-[244px] " : "w-[65px]"
-        } h-screen navigation fixed left-0 bg-[var(--primaryBgColor)] border-[var(--primaryBgColor)]`}
+        } transition-all duration-500 ease-out  h-screen navigation fixed left-0 bg-[var(--primaryBgColor)] border-[var(--primaryBgColor)]`}
       >
         {/* Logo */}
         <div className="group w-full gap-1 flex items-center text-white">
@@ -138,7 +138,6 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </div>
-
       {/* RightBar */}
       <div
         className={`${
@@ -169,12 +168,13 @@ const Layout = ({ children }) => {
 
           <div className="right-topbar-items flex gap-4 pr-4">
             <IoSearchOutline className="w-[25px] h-[25px] lg:hidden cursor-pointer text-primaryTextColor" />
+            <ThemeSwitcher />
+
             <NotificationDropdown />
             <MessagesDropDown />
             <ProfileDropDown classes={"profiler"} />
           </div>
         </div>
-        <ThemeSwitcher />
 
         {children}
       </div>

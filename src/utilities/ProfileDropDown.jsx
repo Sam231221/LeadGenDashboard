@@ -45,8 +45,8 @@ export const ProfileDropDown = ({ classes }) => {
 
       <div
         className={` ${
-          open ? "absolute" : "hidden"
-        }  before:content-[""] before:border-l-[var(--ternaryBgColor)] before:border-t-[var(--ternaryBgColor)] before:border-bg-[var(--primaryBgColor)]  before:border-t-[1px] 
+          open ? "visible opacity-100" : "invisible opacity-0"
+        } absolute transition-opacity duration-500 ease-out before:content-[""] before:border-l-[var(--ternaryBgColor)] before:border-t-[var(--ternaryBgColor)] before:border-bg-[var(--primaryBgColor)]  before:border-t-[1px] 
                             before:border-l-[1px] before:absolute before:top-[-10px] before:right-5 before:h-5 before:w-5
                             before:bg-[var(--primaryBgColor)] before:rotate-[45deg] border
                            top-14 right-[2px] border-[var(--ternaryBgColor)] bg-[var(--primaryBgColor)] drop-shadow-lg w-[220px] p-2`}

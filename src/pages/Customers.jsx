@@ -13,7 +13,7 @@ const Customers = () => {
           </span>
         </p>
       </div>
-      <div className="shadow-lg bg-[var(--primaryBgColor)] rounded p-2">
+      <div className="shadow-lg bg-[var(--primaryBgColor)] rounded p-2 overflow-auto">
         <CustomerTable />
       </div>
     </div>
