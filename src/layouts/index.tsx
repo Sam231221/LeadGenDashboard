@@ -85,7 +85,7 @@ const Layout = ({ children }) => {
             <span className="icon text-4xl py-3 px-3">
               <FaMagento className="text-[var(--LogoBgColor)]" />
             </span>
-            <span className="text-2xl text-[var(--LogoTextColor)] ml-2 font-bold py-3">
+            <span className="text-2xl text-green-500 text-[var(--LogoTextColor)] ml-2 font-bold py-3">
               LeadGen
             </span>
           </Link>
